@@ -19,7 +19,7 @@ jobs:
         python-version: '3.11'
 
     - name: Install dependencies
-      run: pip install pandas openpyxl yfinance matplotlib
+      run: pip install pandas openpyxl yfinance matplotlib scipy seaborn
 
     - name: Run script
       env:
