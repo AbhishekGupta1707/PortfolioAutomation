@@ -287,7 +287,7 @@ for x in master['INSTRUMENT']:
     plt.title('Daily Returns Histogram')
     plt.xlabel('Ddaily returns')
     plt.ylabel('Frequency')
-    plt.savefig(f"Graphs/Daily Returns Histogram_{x}.png")
+    #plt.savefig(f"Graphs/Daily Returns Histogram_{x}.png")
     plt.close()
     
     #Historical VaR
@@ -363,7 +363,7 @@ for x in master['INSTRUMENT']:
     plt.title('Tail Returns histogram (Worst 1%)')
     plt.xlabel('Return')
     plt.ylabel('Frequency')
-    plt.savefig(f"Graphs/Tail Returns histogram (Worst 1%)_{x}.png")
+    #plt.savefig(f"Graphs/Tail Returns histogram (Worst 1%)_{x}.png")
     plt.close()
     
     #Stress testing
@@ -403,7 +403,7 @@ for x in master['INSTRUMENT']:
     plt.title('Drawdown')
     plt.xlabel('Date')
     plt.ylabel('Drawdown')
-    plt.savefig(f"Graphs/Drawdown_{x}.png")
+    #plt.savefig(f"Graphs/Drawdown_{x}.png")
     plt.close()
     
     #Risk Report
