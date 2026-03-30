@@ -26,7 +26,7 @@ import gc
 
 
 nse_list = pd.read_csv('https://archives.nseindia.com/content/equities/EQUITY_L.csv')
-nse_list = nse_list.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+nse_list = nse_list.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x))
 nse_list.columns = nse_list.columns.str.strip()
 
 nse_list = nse_list[nse_list['SERIES'] == 'EQ']
@@ -217,7 +217,7 @@ print("Final enriched stock list saved to Top_Buy_Stocks.xlsx")
 
 
 holdings=pd.read_excel('portfolio_holdings.xlsx',dtype='str')
-holdings=holdings.applymap(lambda x: x.strip() if isinstance (x,str) else x)
+holdings = holdings.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x))
 
 temp=df_final[['INSTRUMENT','PRICE','52W_LOW']]
 temp.columns=['INSTRUMENT','LTP','52W LOW']
