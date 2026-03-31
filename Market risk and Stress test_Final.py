@@ -269,7 +269,10 @@ for x in master['INSTRUMENT']:
 
     #getting start date
     df.index = pd.to_datetime(df.index)
-    start_date=df.index[0]
+    if df is None or df.empty:
+        print(f"Skipping {x} due to no data")
+        continue
+    start_date = df.index[0]
     
     #Return diagnostics
     summary = pd.DataFrame({
