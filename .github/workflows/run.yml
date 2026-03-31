@@ -1,8 +1,10 @@
 name: Run Portfolio Script
 
+# reactivating schedule
+
 on:
   schedule:
-    - cron: '36 5 * * 1-5'
+    - cron: '40 5 * * 1-5'
   workflow_dispatch:
 
 jobs:
